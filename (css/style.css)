@@ -1,0 +1,106 @@
+header{
+    background: #0066cc; /* Azul social/institucional */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+ 
+nav{
+    margin-top: 15px;
+}
+ 
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.8; /* Efeito visual ao passar o mouse */
+}
+ 
+/* Banner Principal (Hero) */
+.hero{
+    height: 450px;
+    background-image: url('../images/banner.png'); /* Caminho correto saindo da pasta css */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+.hero-texto{
+    background: rgba(0, 0, 0, 0.65); /* Fundo escuro para dar leitura ao texto branco */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.hero-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+ 
+/* Seção de Conteúdo e Grid de Projetos */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+ 
+.container h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+}
+ 
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+ 
+/* Cartões de Ações */
+.card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+ 
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    display: block;
+}
+ 
+.card h3{
+    padding: 20px 15px 10px;
+    color: #0066cc;
+}
+ 
+.card p{
+    padding: 0 15px 20px;
+    color: #555;
+    line-height: 1.5;
+}
+ 
+/* Rodapé */
+footer{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
