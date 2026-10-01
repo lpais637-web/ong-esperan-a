@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ONG Esperança</title>
+    <style>
+        /* RESET E CONFIGURAÇÕES GERAIS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
+        
+        /* CABEÇALHO */
+        header { background: #0066cc; color: white; padding: 20px; text-align: center; }
+        nav { margin-top: 15px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: opacity 0.3s ease; }
+        nav a:hover { opacity: 0.8; }
+        
+        /* BANNER DE CONTATO */
+        .banner-contato { 
+            height: 200px; 
+            background: linear-gradient(rgba(0, 102, 204, 0.8), rgba(0, 51, 102, 0.9)), url('images/banner.png') center/cover no-repeat;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: white;
+        }
+        .banner-contato h2 { font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        /* CONTAINER PRINCIPAL */
+        .container { width: 90%; max-width: 1000px; margin: 50px auto; }
+        .intro-texto { text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 40px; }
+        
+        /* LAYOUT EM DUAS COLUNAS */
+        .contato-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        /* COLUNA 1: INFORMAÇÕES DA ONG */
+        .ong-info {
+            flex: 1;
+            min-width: 300px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .ong-info h3 { color: #0066cc; margin-bottom: 20px; font-size: 1.6rem; }
+        .ong-info p { margin-bottom: 15px; font-size: 1rem; color: #555; line-height: 1.6; }
+        .ong-info strong { color: #222; }
+        
+        /* COLUNA 2: CAIXA DO FORMULÁRIO */
+        .form-contato { 
+            flex: 1;
+            min-width: 300px;
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
+            border: 1px solid #e2e8f0;
+        }
+        
+        .form-grupo { margin-bottom: 20px; }
+        .form-grupo label { display: block; margin-bottom: 8px; font-weight: bold; color: #0066cc; }
+        
+        .form-grupo input, .form-grupo textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 8px; 
+            font-size: 1rem;
+            background-color: #f8fafc;
+        }
+        
+        .form-grupo textarea { height: 120px; resize: vertical; }
+        
+        /* BOTÃO ENVIAR */
+        .btn-enviar { 
+            background: #0066cc; 
+            color: white; 
+            border: none; 
+            padding: 14px 20px; 
+            font-size: 1.1rem; 
+            font-weight: bold; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: background 0.3s ease; 
+        }
+        .btn-enviar:hover { background: #004c99; }
+        
+        /* RODAPÉ */
+        footer { background: #222; color: white; text-align: center; padding: 25px; margin-top: 60px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ONG Esperança</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="banner-contato">
+    <h2>Fale Conosco</h2>
+</section>
+
+<section class="container">
+    <p class="intro-texto">Tem alguma dúvida, quer se voluntariar ou fazer uma doação? Entre em contato conosco!</p>
+    
+    <div class="contato-wrapper">
+        <!-- LADO ESQUERDO: DADOS DE CONTATO DA ONG -->
+        <div class="ong-info">
+            <h3>ONG Esperança</h3>
+            <p><strong>Telefone:</strong> (11) 99999-5555</p>
+            <p><strong>E-mail:</strong> contato@ongesperanca.org.br</p>
+            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 9h às 17h</p>
+            <p><strong>Endereço:</strong> Rua da Solidariedade, 123 - Centro</p>
+        </div>
+
+        <!-- LADO DIREITO: FORMULÁRIO -->
+        <form class="form-contato" action="#" method="POST">
+            <div class="form-grupo">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-grupo">
+                <label for="email">Seu E-mail</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+            </div>
+            <div class="form-grupo">
+                <label for="mensagem">Sua Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Como você gostaria de ajudar?" required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 ONG Esperança - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
